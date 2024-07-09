@@ -20,7 +20,9 @@ export default {
   ],
   plugins: [
     peerDepsExternal(),
-    resolve(),
+    resolve({
+        extensions: ['.js', '.jsx', '.ts', '.tsx'],
+      }),
     babel({
         babelHelpers: 'bundled',
         exclude: 'node_modules/**',
