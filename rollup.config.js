@@ -4,6 +4,8 @@ import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import postcss from 'rollup-plugin-postcss';
 import { terser } from 'rollup-plugin-terser';
+import autoprefixer from 'autoprefixer';
+import cssnano from 'cssnano';
 
 export default {
   input: 'src/index.js',
@@ -31,9 +33,11 @@ export default {
     }),
     commonjs(),
     postcss({
-        extract: true,
-        minimize: true,
-      }),
+      plugins: [autoprefixer(), cssnano()],
+      extract: true,
+      minimize: true,
+      verbose: true,
+    }),
     terser(),
   ],
 };
