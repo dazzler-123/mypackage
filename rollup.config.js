@@ -42,5 +42,12 @@ export default {
       verbose: true,
     }),
     terser(),
+    
   ],
+  onwarn: (warning, warn) => {
+    // Skip certain warnings
+    if (warning.code === 'MODULE_LEVEL_DIRECTIVE') return;
+    // Use default for everything else
+    warn(warning);
+  },
 };
