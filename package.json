@@ -13,7 +13,7 @@
     "preview": "vite preview",
     "rollup": "rollup -c"
   },
-  "author": "chandan maurya",
+  "author": "Chandan Maurya",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -32,9 +32,11 @@
     "@mui/x-date-pickers": "^7.9.0",
     "autoprefixer": "^10.4.19",
     "cssnano": "^7.0.4",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
     "react-hook-form": "^7.52.1"
+  },
+  "peerDependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
   },
   "devDependencies": {
     "@babel/core": "^7.24.7",
