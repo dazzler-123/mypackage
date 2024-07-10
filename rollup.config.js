@@ -31,7 +31,10 @@ export default {
         exclude: 'node_modules/**',
         presets: ['@babel/preset-env', '@babel/preset-react'],
     }),
-    commonjs(),
+    commonjs({
+      ignoreGlobal: true,
+      include: /node_modules/,
+    }),
     postcss({
       plugins: [autoprefixer(), cssnano()],
       extract: true,
