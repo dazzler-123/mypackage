@@ -1,0 +1,60 @@
+/* eslint-disable react/prop-types */
+import React from "react";
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableContainer,
+  TableHead,
+  TableRow,
+  IconButton,
+  Button,
+} from "@mui/material";
+import { Add, Delete } from "@mui/icons-material";
+
+const MyInputTypeTable = ({
+  mutlilanguage,
+  rows = [{ id: "" }],
+  columns = [{ field: "", headerName: "" }],
+  componentType,
+  buttonAction,
+  ActionType,
+  iconAction,
+  renderInputField=()=>{},
+}) => {
+  return (
+    <TableContainer component={componentType}>
+      <Table>
+        <TableHead>
+          <TableRow>
+          {columns.map(column => (
+              <TableCell key={column.field}>{mutlilanguage(column.headerName)}</TableCell>
+            ))}
+            <TableCell>{ActionType}</TableCell>
+          </TableRow>
+        </TableHead>
+        <TableBody>
+          {rows.map((row) => (
+            <TableRow key={row.id}>
+              {columns.map((column) => (
+                <TableCell key={column.field}>
+                  {renderInputField(row, column)}
+                </TableCell>
+              ))}
+              <TableCell>
+                <IconButton onClick={()=>iconAction(row.id)}>
+                  <Delete />
+                </IconButton>
+              </TableCell>
+            </TableRow>
+          ))}
+        </TableBody>
+      </Table>
+      <Button onClick={buttonAction} startIcon={<Add />}>
+        Add Row
+      </Button>
+    </TableContainer>
+  );
+};
+
+export default MyInputTypeTable;
