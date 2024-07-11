@@ -10,7 +10,7 @@ import FormLabel from "@mui/material/FormLabel";
 const MyRadioGroups = ({
   onChange=()=>null,
   defaultValue,
-  radioOptions = { option1: "", optionlabel: "" },
+  radioOptions = [{ option1: "", optionlabel: "" }],
   multiLanguage=() => null,
   formLable,
   name,

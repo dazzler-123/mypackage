@@ -1,6 +1,4 @@
-export { default as MyCheckBox  } from './CheckBox';
+export { default as MyInputTypeCheckBox  } from './PureComponent/MyInputTypeCheckBox';
 // export { default as MyDate  } from './Date';
-export { default as MyDropDown  } from './DropDown';
-export { default as MyRadioGroup  } from './RadioGroup';
-export { default as MyMultiSelectDropDown  } from './MultiSelectDropDown';
-export { default as Mycomponent  } from './Mycomponent';
+export { default as MyInputTypeDropDown  } from './PureComponent/MyInputTypeDropDown';
+export { default as MyInputTypeRadioGroup  } from './PureComponent/MyInputTypeRadioGroup';
