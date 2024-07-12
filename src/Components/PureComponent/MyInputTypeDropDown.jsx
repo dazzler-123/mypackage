@@ -15,15 +15,13 @@ const MyInputTypeDropDown = ({
   label = "",
   labelId = "",
   onChange,
-  allprops={},
-  sx = {  },
-  data=[{value: " ", label : ""}],
+  allprops = {},
+  sx = {},
+  data = [{ value: " ", label: "" }],
   className,
   isInvalid = false,
   inputError = "",
-  name =" "
-
-  
+  name = "",
 }) => {
   return (
     <Box>
@@ -50,9 +48,7 @@ const MyInputTypeDropDown = ({
             );
           })}
         </Select>
-        {isInvalid && (
-          <FormHelperText>{inputError}</FormHelperText>
-        )}
+        {isInvalid && <FormHelperText>{inputError}</FormHelperText>}
       </FormControl>
     </Box>
   );
