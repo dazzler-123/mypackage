@@ -1,10 +1,6 @@
 import React from "react";
 import { Controller } from "react-hook-form";
 import { LocalizationProvider, DatePicker } from "@mui/x-date-pickers";
-import dayjs from "dayjs";
-// import "dayjs/locale/hi";
-// import "dayjs/locale/ar";
-// import "../Style.css";
 
 const MyDate = ({
   dispatchername,
@@ -23,7 +19,8 @@ const MyDate = ({
   dobPlaceHolder,
   format,
   helperText,
-  dateAdapter
+  dateAdapter,
+  dayjs
 }) => {
   return (
     <div className="input-wrapper date-input">
