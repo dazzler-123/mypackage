@@ -14,7 +14,7 @@ const MyInputTypeRadioGroup = ({
   name="",
   TextFieldLabel,
   allprops,
-  defaultvalue = null,
+  defaultValue = null,
   onChange,
   data = [{ option1: "", optionlabel: "" }],
 }) => {
@@ -25,7 +25,7 @@ const MyInputTypeRadioGroup = ({
         row={row}
         aria-labelledby="demo-row-radio-buttons-group-label"
         name={name}
-        defaultValue={defaultvalue}
+        defaultValue={defaultValue}
         onChange={onChange}
         {...allprops}
         sx={sx}

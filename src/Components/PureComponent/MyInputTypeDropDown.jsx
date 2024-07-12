@@ -10,12 +10,12 @@ import FormHelperText from "@mui/material/FormHelperText";
 const MyInputTypeDropDown = ({
   error,
   TextFieldLabel,
-  multiLanguage,
+  multilanguage,
   id = "",
   label = "",
   labelId = "",
   onChange,
-  allprops,
+  allprops={},
   sx = {  },
   data=[{value: " ", label : ""}],
   className,
@@ -29,7 +29,7 @@ const MyInputTypeDropDown = ({
     <Box>
       <FormControl sx={{ width: "100%" }} error={error}>
         <InputLabel id={id} sx={{ color: "inherit" }}>
-          {multiLanguage(TextFieldLabel)}
+          {multilanguage(TextFieldLabel)}
         </InputLabel>
         <Select
           labelId={labelId}
