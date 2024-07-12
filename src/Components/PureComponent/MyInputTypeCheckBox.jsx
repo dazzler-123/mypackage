@@ -3,7 +3,7 @@ import Checkbox from '@mui/material/Checkbox';
 import FormGroup from '@mui/material/FormGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 
-const MyInputTypeCheckBox = ({multilanguage, label, sx = {},allprops, defaultChecked=false, onChange,name=""}) => {
+const MyInputTypeCheckBox = ({multilanguage, TextFieldLabel, sx = {},allprops, defaultChecked=false, onChange,name=""}) => {
     // const { t } = useTranslation();
     // const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
 
@@ -47,7 +47,7 @@ const MyInputTypeCheckBox = ({multilanguage, label, sx = {},allprops, defaultChe
  
                <FormGroup>
             <FormControlLabel control={<Checkbox defaultChecked={defaultChecked} />}
-                   label={multilanguage(label)}
+                   label={multilanguage(TextFieldLabel)}
                      onChange={onchange}
                      name={name}
                      {...allprops }/>

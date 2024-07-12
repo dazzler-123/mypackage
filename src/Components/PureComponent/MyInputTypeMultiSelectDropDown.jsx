@@ -29,7 +29,7 @@ error,
 name="",
 value={},
 onChange,
-textLabel,
+TextFieldLabel,
 renderValue,
 inputProps ={'aria-label': 'Without label' },
 inputError,
@@ -47,7 +47,7 @@ selectedCourses,
                 error={error}
 
             >
-                <InputLabel id="demo-multiple-checkbox-label">{multiplelanguage(textLabel)}</InputLabel>
+                <InputLabel id="demo-multiple-checkbox-label">{multiplelanguage(TextFieldLabel)}</InputLabel>
                 <Select
                     labelId="demo-multiple-checkbox-label"
                     id="demo-multiple-checkbox"
@@ -56,7 +56,7 @@ selectedCourses,
                     {...allprops}
                     onChange={onChange}
                     name={name}
-                    input={<OutlinedInput label={multiplelanguage(textLabel)} />}
+                    input={<OutlinedInput label={multiplelanguage(TextFieldLabel)} />}
                     renderValue={renderValue}
                     MenuProps={MenuProps}
                     inputProps={inputProps}

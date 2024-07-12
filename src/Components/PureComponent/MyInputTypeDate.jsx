@@ -1,7 +1,6 @@
 import React from "react";
 import { Controller } from "react-hook-form";
 import { LocalizationProvider, DatePicker } from "@mui/x-date-pickers";
-import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import dayjs from "dayjs";
 // import "dayjs/locale/hi";
 // import "dayjs/locale/ar";
@@ -12,7 +11,7 @@ const MyDate = ({
   validation,
   name,
   multiLanguage,
-  label,
+  TextFieldLabel,
   handleOnChange,
   mindate,
   setCleared,
@@ -23,7 +22,8 @@ const MyDate = ({
   inputError,
   dobPlaceHolder,
   format,
-  helperText
+  helperText,
+  dateAdapter
 }) => {
   return (
     <div className="input-wrapper date-input">
@@ -34,12 +34,12 @@ const MyDate = ({
         render={({ field: { onChange, value } }) => {
           return (
             <LocalizationProvider
-              dateAdapter={AdapterDayjs}
+              dateAdapter={dateAdapter}
               adapterLocale={i18n.language}
             >
               <DatePicker
                 name={name}
-                label={multiLanguage(label)}
+                label={multiLanguage(TextFieldLabel)}
                 className="input-field date-picker"
                 onChange={(date) => {
                   onChange(date);

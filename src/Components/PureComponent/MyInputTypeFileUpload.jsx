@@ -6,7 +6,7 @@ import React from 'react';
 import { Button, FormControl, Typography } from '@mui/material';
 
 
-const MyInputTypeFileUpload = ({multilanguage,inputError,isInvalid=false,color,name,label,component,onChange,allprops,type="file"}) => {
+const MyInputTypeFileUpload = ({multilanguage,inputError,isInvalid=false,color,name,TextFieldLabel,component,onChange,allprops,type="file"}) => {
  
 
   return (
@@ -17,7 +17,7 @@ const MyInputTypeFileUpload = ({multilanguage,inputError,isInvalid=false,color,n
         component={component}
         color={color}
       >
-        {multilanguage(label)}
+        {multilanguage(TextFieldLabel)}
         <input
           type={type}
 

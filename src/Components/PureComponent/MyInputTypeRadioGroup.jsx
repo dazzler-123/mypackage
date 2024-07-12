@@ -12,7 +12,7 @@ const MyInputTypeRadioGroup = ({
   sx = {},
   row = false,
   name="",
-  RadioFormLabel,
+  TextFieldLabel,
   allprops,
   defaultvalue = null,
   onChange,
@@ -20,7 +20,7 @@ const MyInputTypeRadioGroup = ({
 }) => {
   return (
     <FormControl sx={{ width: "100%", alignItems: "flex-start" }}>
-      <FormLabel id={id}>{multilanguage(RadioFormLabel)}</FormLabel>
+      <FormLabel id={id}>{multilanguage(TextFieldLabel)}</FormLabel>
       <RadioGroup
         row={row}
         aria-labelledby="demo-row-radio-buttons-group-label"
