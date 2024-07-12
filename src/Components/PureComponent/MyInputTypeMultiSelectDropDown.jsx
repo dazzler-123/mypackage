@@ -23,7 +23,7 @@ const MenuProps = {
 };
 
 const MyInputTypeMultiSelectDropDown = ({
-multiplelanguage,
+mutlilanguage,
 allprops,
 error,
 name="",
@@ -47,7 +47,7 @@ selectedCourses,
                 error={error}
 
             >
-                <InputLabel id="demo-multiple-checkbox-label">{multiplelanguage(TextFieldLabel)}</InputLabel>
+                <InputLabel id="demo-multiple-checkbox-label">{mutlilanguage(TextFieldLabel)}</InputLabel>
                 <Select
                     labelId="demo-multiple-checkbox-label"
                     id="demo-multiple-checkbox"
@@ -56,13 +56,13 @@ selectedCourses,
                     {...allprops}
                     onChange={onChange}
                     name={name}
-                    input={<OutlinedInput label={multiplelanguage(TextFieldLabel)} />}
+                    input={<OutlinedInput label={mutlilanguage(TextFieldLabel)} />}
                     renderValue={renderValue}
                     MenuProps={MenuProps}
                     inputProps={inputProps}
                 >
                     <MenuItem disabled value="">
-                        <em>    {multiplelanguage(menuItemLabel)}</em>
+                        <em>    {mutlilanguage(menuItemLabel)}</em>
                     </MenuItem>
                     {data.map((name) => (
                         <MenuItem key={name.id} value={name.label}>
