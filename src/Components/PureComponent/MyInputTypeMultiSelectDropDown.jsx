@@ -54,7 +54,7 @@ selectedCourses,
                     multiple
                     value={value}
                     {...allprops}
-                    onChange={onChange}
+                    onChange={(e)=>onChange(e,data)}
                     name={name}
                     input={<OutlinedInput label={multilanguage(TextFieldLabel)} />}
                     renderValue={renderValue}
