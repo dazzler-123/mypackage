@@ -6,7 +6,7 @@ const MyDate = ({
   dispatchername,
   validation,
   name,
-  multiLanguage,
+  multilanguage,
   TextFieldLabel,
   handleOnChange,
   mindate,
