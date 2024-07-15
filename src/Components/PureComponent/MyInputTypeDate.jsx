@@ -36,7 +36,7 @@ const MyDate = ({
             >
               <DatePicker
                 name={name}
-                label={multiLanguage(TextFieldLabel)}
+                label={multilanguage(TextFieldLabel)}
                 className="input-field date-picker"
                 onChange={(date) => {
                   onChange(date);
@@ -44,7 +44,7 @@ const MyDate = ({
                 }}
                 value={value ? dayjs(value, "DD-MM-YYYY") : null}
                 format={format}
-                placeholder={multiLanguage(dobPlaceHolder)}
+                placeholder={multilanguage(dobPlaceHolder)}
                 minDate={mindate}
                 maxDate={maxdate}
                 views={["year", "month", "day"]}
