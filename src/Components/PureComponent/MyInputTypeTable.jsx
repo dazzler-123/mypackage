@@ -13,7 +13,7 @@ import {
 import { Add, Delete } from "@mui/icons-material";
 
 const MyInputTypeTable = ({
-  mutlilanguage,
+  multilanguage,
   rows = [{ id: "" }],
   columns = [{ field: "", headerName: "" }],
   componentType,
@@ -28,7 +28,7 @@ const MyInputTypeTable = ({
         <TableHead>
           <TableRow>
           {columns.map(column => (
-              <TableCell key={column.field}>{mutlilanguage(column.headerName)}</TableCell>
+              <TableCell key={column.field}>{multilanguage(column.headerName)}</TableCell>
             ))}
             <TableCell>{ActionType}</TableCell>
           </TableRow>
