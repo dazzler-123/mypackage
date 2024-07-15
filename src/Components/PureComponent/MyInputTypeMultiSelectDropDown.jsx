@@ -30,7 +30,6 @@ name="",
 value={},
 onChange,
 TextFieldLabel,
-renderValue,
 inputProps ={'aria-label': 'Without label' },
 inputError,
 isInvalid=false,
@@ -53,11 +52,17 @@ selectedCourses,
                     id="demo-multiple-checkbox"
                     multiple
                     value={value}
+                    onChange={onChange}
                     {...allprops}
-                    onChange={(e)=>onChange(e,data)}
                     name={name}
                     input={<OutlinedInput label={multilanguage(TextFieldLabel)} />}
-                    renderValue={renderValue}
+                    renderValue={(selected) => {
+                        if (selected.length === 0) {
+                            return <em>{multilanguage("createdynamicpage.techKnowButtonText")}</em>;
+                        }
+
+                        return selected.join(", ");
+                    }}
                     MenuProps={MenuProps}
                     inputProps={inputProps}
                 >

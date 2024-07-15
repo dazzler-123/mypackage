@@ -23,7 +23,7 @@ const MyInputTypeDropDown = ({
   inputError = "",
   name = "",
   value = "",
-  defaultValue=''
+  defaultValue = "",
 }) => {
   return (
     <Box>
@@ -35,11 +35,10 @@ const MyInputTypeDropDown = ({
           labelId={labelId}
           id={id}
           label={label}
-          
+          onChange={onChange}
           defaultValue={defaultValue}
           value={value}
           {...allprops}
-          onChange={(e)=>onChange(e,data)}
           sx={sx}
           name={name}
           className={className}
