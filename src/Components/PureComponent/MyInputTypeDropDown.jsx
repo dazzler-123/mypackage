@@ -43,7 +43,7 @@ const MyInputTypeDropDown = ({
         >
           {data.map((option, index) => {
             return (
-              <MenuItem value={option.value} key={index}>
+              <MenuItem value={option.label} key={index}>
                 {option.label}
               </MenuItem>
             );
