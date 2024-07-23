@@ -20,7 +20,8 @@ const MyDate = ({
   format,
   helperText,
   dateAdapter,
-  dayjs
+  dayjs,
+  disabled
 }) => {
   return (
     <div className="input-wrapper date-input">
@@ -35,6 +36,7 @@ const MyDate = ({
               adapterLocale={i18n.language}
             >
               <DatePicker
+                disabled={disabled}
                 name={name}
                 label={multilanguage(TextFieldLabel)}
                 className="input-field date-picker"

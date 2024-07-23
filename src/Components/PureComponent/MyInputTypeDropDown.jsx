@@ -22,7 +22,6 @@ const MyInputTypeDropDown = ({
   isInvalid = false,
   inputError = "",
   name = "",
-  value = "",
   defaultValue = "",
 }) => {
   return (
@@ -37,7 +36,6 @@ const MyInputTypeDropDown = ({
           label={label}
           onChange={onChange}
           defaultValue={defaultValue}
-          value={value}
           {...allprops}
           sx={sx}
           name={name}

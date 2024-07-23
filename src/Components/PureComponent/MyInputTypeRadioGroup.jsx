@@ -11,12 +11,13 @@ const MyInputTypeRadioGroup = ({
   id = "",
   sx = {},
   row = false,
-  name="",
+  name = "",
   TextFieldLabel,
   allprops,
   defaultValue = null,
   onChange,
   data = [{ option1: "", optionlabel: "" }],
+  disabled
 }) => {
   return (
     <FormControl sx={{ width: "100%", alignItems: "flex-start" }}>
@@ -32,6 +33,7 @@ const MyInputTypeRadioGroup = ({
       >
         {data.map((item, index) => (
           <FormControlLabel
+            disabled={disabled}
             key={index}
             value={item.option1}
             control={<Radio />}
