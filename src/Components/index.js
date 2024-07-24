@@ -6,3 +6,4 @@ export { default as MyInputTypeDate  } from './PureComponent/MyInputTypeDate';
 export { default as MyInputTypeFileUpload  } from './PureComponent/MyInputTypeFileUpload';
 export { default as MyInputTypeMultiSelectDropDown  } from './PureComponent/MyInputTypeMultiSelectDropDown';
 export { default as MyInputTypeTable  } from './PureComponent/MyInputTypeTable';
+export { default as MyGridComponent  } from './PureComponent/MyGridComponent';
