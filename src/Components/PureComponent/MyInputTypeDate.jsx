@@ -21,7 +21,8 @@ const MyDate = ({
   helperText,
   dateAdapter,
   dayjs,
-  disabled
+  disabled,
+  defaultValue=""
 }) => {
   return (
     <div className="input-wrapper date-input">
@@ -29,6 +30,7 @@ const MyDate = ({
         control={control}
         name={dispatchername}
         rules={validation}
+        defaultValue={defaultValue}
         render={({ field: { onChange, value } }) => {
           return (
             <LocalizationProvider
