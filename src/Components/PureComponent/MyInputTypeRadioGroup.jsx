@@ -28,11 +28,12 @@ const MyInputTypeRadioGroup = ({
         name={name}
         defaultValue={defaultValue}
         onChange={onChange}
-        {...allprops}
+     
         sx={sx}
       >
         {data.map((item, index) => (
           <FormControlLabel
+          {...allprops}
             disabled={disabled}
             key={index}
             value={item.option1}
