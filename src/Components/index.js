@@ -8,3 +8,4 @@ export { default as MyInputTypeMultiSelectDropDown } from "./PureComponent/MyInp
 export { default as MyInputTypeTable } from "./PureComponent/MyInputTypeTable";
 export { default as MyGridComponent } from "./PureComponent/MyGridComponent";
 export { default as MyDynamicInputTextWrapper } from "./PureComponent/DynamicInputTextWrapper";
+export { default as MyAutocomplete } from "./PureComponent/MyAutocompleteTextInput";

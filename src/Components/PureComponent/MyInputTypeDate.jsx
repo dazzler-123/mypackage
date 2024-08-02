@@ -21,8 +21,7 @@ const MyDate = ({
   helperText,
   dateAdapter,
   dayjs,
-  disabled,
-  defaultValue=""
+  defaultValue
 }) => {
   return (
     <div className="input-wrapper date-input">
@@ -38,7 +37,6 @@ const MyDate = ({
               adapterLocale={i18n.language}
             >
               <DatePicker
-                disabled={disabled}
                 name={name}
                 label={multilanguage(TextFieldLabel)}
                 className="input-field date-picker"
@@ -46,7 +44,7 @@ const MyDate = ({
                   onChange(date);
                   handleOnChange(date);
                 }}
-                value={value ? dayjs(value, "DD-MM-YYYY") : null}
+                value={value ? dayjs(value) : null}
                 format={format}
                 placeholder={multilanguage(dobPlaceHolder)}
                 minDate={mindate}
