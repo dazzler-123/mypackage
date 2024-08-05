@@ -1,6 +1,6 @@
-/* eslint-disable react/prop-types */
+/* eslint-disable react/prop- */
 import React from "react";
-import { FormControl, TextField, Autocomplete } from "@mui/material";
+import { FormControl, TextField, Autocomplete, FormHelperText } from "@mui/material";
 
 const MyAutocomplete = ({
   multilanguage,
@@ -8,14 +8,16 @@ const MyAutocomplete = ({
   label,
   placeholder,
   error,
-  helperText,
   onChange,
   name = "",
   sx = {},
   data = [],
   inputValue,
   setInputValue,
-  value
+  value,
+  isInvalid,
+  inputError,
+  helperText
 }) => {
   return (
     <FormControl sx={{ width: "100%" }}>
