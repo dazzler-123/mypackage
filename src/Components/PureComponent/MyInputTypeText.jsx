@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import React from "react";
 import { FormControl } from "@mui/material";
 import TextField from "@mui/material/TextField";
@@ -13,13 +12,15 @@ const MyInputTypeText = ({
   type = "text",
   onChange,
   name="",
-  sx={}
+  sx={},
+  defaultValue
 }) => {
    
   return (
     <FormControl sx={{ width: "100%" }}>
       <TextField
         label={multilanguage(TextFieldLabel)}
+        defaultValue={defaultValue}
         type={type}
         name={name}
         autoComplete={autoComplete}
