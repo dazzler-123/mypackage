@@ -20,9 +20,7 @@ const MyInputTypeTable = ({
   ActionType,
   iconAction,
   renderInputField=()=>{},
-}) => {
-    console.log(columns);
-    
+}) => {  
   return (
     <TableContainer component={componentType}>
       <Table>
